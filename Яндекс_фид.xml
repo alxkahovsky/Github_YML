@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2019-11-01 17:22">
+    <shop>
+        <name>Название</name>
+        <company>Полное название</company>
+        <url>https://shop-url.ru</url>
+        <currencies>
+            <currency id="RUR" rate="1"/>
+        </currencies>
+        <categories>
+                    <category id="1">"Категория"</category>
+                    <category id="2" parentId="1">"подкатегория"</category>
+                    <category id="3" parentId="2">"подкатегория2"</category>
+        </categories>
+        <pickup-options>
+            <option cost="0" days="1"/>
+        </pickup-options>
+        <offers>
+            <offer id="111111">
+                <name>Наименование товара (1)</name>
+                <url>https://shop-url.ru/catalog/product/111111/tovar/</url>
+                <price>1749.00</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>2</categoryId>
+                <picture>https://shop-url.ru/media/product_covers/tovar.png</picture>
+                <delivery>false</delivery>
+                <pickup>true</pickup>
+                <pickup-options>
+                    <option cost="0" days="1-3"/>
+                </pickup-options>
+                <store>true</store>
+                <description>
+                    <![CDATA[
+                        <h3>Description header</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisci elit</p>
+                ]]>
+                </description>
+                </offer>
+            <offer id="222222">
+                <name>Наименование товара (2)</name>
+                <url>https://shop-url.ru/catalog/product/222222/tovar2/</url>
+                <price>924.00</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>3</categoryId>
+                <picture>https://shop-url.ru/media/product_covers/tovar2.png</picture>
+                <delivery>false</delivery>
+                <pickup>true</pickup>
+                <pickup-options>
+                    <option cost="0" days="1-3"/>
+                </pickup-options>
+                <store>true</store>
+                <description>
+                    <![CDATA[
+                        <h3>Description header</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisci elit</p>
+                ]]>
+                </description>
+                </offer>
+        </offers>
+    </shop>
+</yml_catalog>

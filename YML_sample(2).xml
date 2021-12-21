@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2019-11-01 17:22">
+    <shop>
+        <name>Название</name>
+        <company>Полное название</company>
+        <url>https://shop-url.ru</url>
+        <currencies>
+            <currency id="RUR" rate="1"/>
+        </currencies>
+        <categories>
+            {% for el in test %}
+                {% if el['Sub_gr'] %}
+                    <category id="{{el['id']}}" parentId="{{el['Parent_id']}}">"{{ el['Sub_gr'] }}"</category>
+                    {% else %}
+                    <category id="{{el['id']}}">"{{el['Core_gr']}}"</category>
+                {% endif %}
+            {% endfor %}
+        </categories>
+        <pickup-options>
+            <option cost="0" days="1"/>
+        </pickup-options>
+        <offers>
+            {% for offer in offers %}
+            <offer id="{{offer[2]}}">
+                <name>{{offer[4]}}</name>
+                <url>{{offer[0]}}</url>
+                <price>{{offer[1]}}</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>{{offer[5]}}</categoryId>
+                <picture>{{offer[3]}}</picture>
+                <delivery>false</delivery>
+                <pickup>true</pickup>
+                <pickup-options>
+                    <option cost="0" days="1-3"/>
+                </pickup-options>
+                <store>true</store>
+                <description>
+                    <![CDATA[
+                        <h3>Description header</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisci elit</p>
+                ]]>
+                </description>
+                </offer>
+            {% endfor %}
+        </offers>
+    </shop>
+</yml_catalog>
