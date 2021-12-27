@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog>
+    <shop>
+        <categories>
+            {% for el in test %}
+                {% if el['Sub_gr'] %}
+            <category id="{{el['id']}}">{{ el['Sub_gr'] }}</category>
+                {% endif %}
+            {% endfor %}
+        </categories>
+        <offers>
+            {% for offer in offers %}
+            <offer id="{{offer[2]}}">
+                <name>{{offer[4]}}</name>
+                <price>{{offer[1]}}</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>{{offer[5]}}</categoryId>
+                <picture>{{offer[3]}}</picture>
+                <description>
+                    {{offer[4]}}
+                </description>
+            </offer>
+            {% endfor %}
+        </offers>
+    </shop>
+</yml_catalog>

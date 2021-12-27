@@ -56,7 +56,7 @@ env = Environment(
     loader=FileSystemLoader('C:\\Users\\Пользователь\\PycharmProjects\\YMLscript\\'),
     trim_blocks=True,
     lstrip_blocks=True)
-template = env.get_template('YML_sample(2).xml')
+template = env.get_template('YML_sample(2).xml') # В этой строке можем заменить шаблон, YML_sample - упрощенный вид фида для Турбо страниц, Товарного пердставления в поиске и Яндекс объявлений. YML для Яндекс карт предназначен для загрузки товаров через сервис Яндекс бизнес в Яндекс карты.
 
 with open('table example.csv', 'r') as f:
     reader = csv.reader(f, delimiter=";")
